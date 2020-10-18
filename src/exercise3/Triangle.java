@@ -13,14 +13,14 @@ public class Triangle {
         do {
           boolean fiki = a > 0 && b > 0 && c > 0 && b+c>a && a+c>b && a+b>c;
           if (fiki){
-            double s = (a + b + c) / 2;
+            double s = (a + b + c) / 2.0;
             double Area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
             System.out.println("Area: " + Area);
-            if (a == b && a == c){
+            if (a == b && b == c ){
              System.out.println("Triangle: equilateral" );
-            } else if ( a == b || b == c){
+            } else if ( a == b || a == c || b == c){
              System.out.println("Triangle: isosceles");
-            } else {
+            } else if (a != b && b != c && a != c) {
               System.out.println("Triangle: scalene");
             }
           } else {
