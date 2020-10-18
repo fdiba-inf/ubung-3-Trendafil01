@@ -7,10 +7,16 @@ public class Triangle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double a = input.nextDouble();
-        double b = input.nextDouble();
-        double c = input.nextDouble();
+        double a;
+        double b;
+        double c;
         do {
+          System.out.println("Enter a value for a: ");
+          a = input.nextDouble();
+          System.out.println("Enter a value for b: ");
+          b = input.nextDouble();
+          System.out.println("Enter a value for c: ");
+          c = input.nextDouble();
           boolean fiki = a > 0 && b > 0 && c > 0 && b+c>a && a+c>b && a+b>c;
           if (fiki){
             double s = (a + b + c) / 2.0;
@@ -20,15 +26,15 @@ public class Triangle {
              System.out.println("Triangle: equilateral" );
             } else if ( a == b || a == c || b == c){
              System.out.println("Triangle: isosceles");
-            } else if (a != b && b != c && a != c) {
+            } else  {
               System.out.println("Triangle: scalene");
             }
           } else {
-            System.out.println("Values are not correct!");
+            System.out.println("Values are not correct! ");
             
           }
              break; 
-        } while (a > 0 && b > 0 && c > 0 && b+c>a && a+c>b && a+b>c);
+        } while ( a > 0 || b > 0 || c > 0);
 
     }
 
